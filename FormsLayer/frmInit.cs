@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FormsLayer
 {
-    public partial class Form1 : Form
+    public partial class frmInit : Form
     {
-        public Form1()
+        public frmInit()
         {
             InitializeComponent();
         }

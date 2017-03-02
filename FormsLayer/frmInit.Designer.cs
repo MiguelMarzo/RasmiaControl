@@ -1,6 +1,6 @@
 ﻿namespace FormsLayer
 {
-    partial class Form1
+    partial class frmInit
     {
         /// <summary>
         /// Variable del diseñador necesaria.
