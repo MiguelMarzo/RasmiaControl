@@ -24,8 +24,14 @@ namespace FormsLayer
 
         private void btnControl_Click(object sender, EventArgs e)
         {
-            frmLotesActivos lotesActivos = new frmLotesActivos();
+            frmLotesActivos lotesActivos = new frmLotesActivos();            
             lotesActivos.Show();
+            this.Close();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

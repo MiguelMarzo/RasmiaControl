@@ -30,5 +30,12 @@ namespace FormsLayer
                 FechaInicio = o.fechaInicio
             }).ToList();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmInit inicio = new frmInit();            
+            inicio.Show();
+            this.Close();
+        }
     }
 }

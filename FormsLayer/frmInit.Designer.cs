@@ -34,6 +34,7 @@
             this.btnBuscarLote = new System.Windows.Forms.Button();
             this.btnEstadisticas = new System.Windows.Forms.Button();
             this.btnAjustes = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -91,12 +92,26 @@
             this.btnAjustes.Text = "Ajustes";
             this.btnAjustes.UseVisualStyleBackColor = true;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalir.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(39, 285);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(169, 109);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // frmInit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(711, 406);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAjustes);
             this.Controls.Add(this.btnEstadisticas);
             this.Controls.Add(this.btnBuscarLote);
@@ -122,6 +137,7 @@
         private System.Windows.Forms.Button btnBuscarLote;
         private System.Windows.Forms.Button btnEstadisticas;
         private System.Windows.Forms.Button btnAjustes;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 

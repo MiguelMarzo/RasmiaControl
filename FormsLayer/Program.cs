@@ -16,7 +16,10 @@ namespace FormsLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInit());
+            var inicio = new frmInit();
+            inicio.Show();
+            Application.Run();
+            //Application.Run(new frmInit());
         }
     }
 }
