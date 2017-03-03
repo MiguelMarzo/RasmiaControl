@@ -12,11 +12,11 @@ namespace EntityLayer
         public String miel { get; set; }
         public decimal litros { get; set; }
         public DateTime fechaInicio { get; set; }
-        public DateTime fechaFin { get; set; }
+        public String fechaFin { get; set; }
         public String variedad { get; set; }
         public String activo { get; set; }
 
-        public Lote(int idLote, String miel, decimal litros, DateTime fechaInicio, DateTime fechaFin, String variedad, String activo)
+        public Lote(int idLote, String miel, decimal litros, DateTime fechaInicio, String fechaFin, String variedad, String activo)
         {
             this.idLote = idLote;
             this.miel = miel;

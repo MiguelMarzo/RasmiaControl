@@ -58,6 +58,7 @@
             this.btnControl.TabIndex = 1;
             this.btnControl.Text = "Ver Lotes Activos";
             this.btnControl.UseVisualStyleBackColor = true;
+            this.btnControl.Click += new System.EventHandler(this.btnControl_Click);
             // 
             // btnBuscarLote
             // 

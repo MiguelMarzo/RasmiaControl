@@ -44,5 +44,26 @@ namespace DataLayer.Properties {
                 return ((string)(this["RasmiaDBConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\RasmiaDB.accdb")]
+        public string RasmiaDBConnectionString2 {
+            get {
+                return ((string)(this["RasmiaDBConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Mig\\Source\\Repos\\RasmiaCon" +
+            "trol\\FormsLayer\\bin\\Debug\\RasmiaDB.accdb")]
+        public string RasmiaDBConnectionString3 {
+            get {
+                return ((string)(this["RasmiaDBConnectionString3"]));
+            }
+        }
     }
 }

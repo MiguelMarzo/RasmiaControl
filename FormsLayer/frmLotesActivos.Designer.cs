@@ -51,6 +51,7 @@
             // 
             // dgvLotesActivos
             // 
+            this.dgvLotesActivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvLotesActivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLotesActivos.Location = new System.Drawing.Point(12, 67);
             this.dgvLotesActivos.Name = "dgvLotesActivos";
@@ -88,9 +89,13 @@
             this.Controls.Add(this.dgvLotesActivos);
             this.Controls.Add(this.lblTitulo);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmLotesActivos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lotes Activos";
+            this.Load += new System.EventHandler(this.frmLotesActivos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLotesActivos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
