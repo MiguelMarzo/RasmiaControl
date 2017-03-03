@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace FormsLayer
 {
-    public partial class frmInit : Form
+    public partial class frmLotesActivos : Form
     {
-        public frmInit()
+        public frmLotesActivos()
         {
             InitializeComponent();
-        }
-
-        private void frmInit_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
