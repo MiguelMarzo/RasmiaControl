@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsLayer", "FormsLayer\FormsLayer.csproj", "{EFCEE6F3-734F-40CD-B5B7-BB9C90AB0F79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "FormsLayer\CapaPresentacion.csproj", "{EFCEE6F3-734F-40CD-B5B7-BB9C90AB0F79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{559CCD87-B039-4925-9A62-3AE8A19BEA4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "DataLayer\CapaDatos.csproj", "{559CCD87-B039-4925-9A62-3AE8A19BEA4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicLayer", "LogicLayer\LogicLayer.csproj", "{21F77E79-7269-48CD-837F-0BA21CA801D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "LogicLayer\CapaNegocio.csproj", "{21F77E79-7269-48CD-837F-0BA21CA801D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityLayer", "EntityLayer\EntityLayer.csproj", "{4A177F83-0D0B-4CA5-B75E-CF7C60B79741}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidades", "EntityLayer\CapaEntidades.csproj", "{4A177F83-0D0B-4CA5-B75E-CF7C60B79741}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

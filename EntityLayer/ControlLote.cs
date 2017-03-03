@@ -6,23 +6,25 @@ using System.Threading.Tasks;
 
 namespace EntityLayer
 {
-    class LotControl : IEquatable<LotControl>
+    public class ControlLote : IEquatable<ControlLote>
     {
         public int idControl { get; set; }
         public int idLot { get; set; }
         public String temperature { get; set; }
         public String density { get; set; }
         public String employee { get; set; }
+        public String ph { get; set; }
 
-        public LotControl(int idControl, int idLot, String temperature, String density, String employee)
+        public ControlLote(int idControl, int idLot, String temperature, String density, String employee, String ph)
         {
             this.idControl = idControl;
             this.idLot = idLot;
             this.temperature = temperature;
             this.density = density;
             this.employee = employee;
+            this.ph = ph;
         }
-        public bool Equals(LotControl other)
+        public bool Equals(ControlLote other)
         {
             if (other == null)
                 return false;
