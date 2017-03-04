@@ -14,8 +14,9 @@ namespace EntityLayer
         public String density { get; set; }
         public String employee { get; set; }
         public String ph { get; set; }
+        public String observaciones { get; set; }
 
-        public ControlLote(int idControl, int idLot, String temperature, String density, String employee, String ph)
+        public ControlLote(int idControl, int idLot, String temperature, String density, String employee, String ph, String observaciones)
         {
             this.idControl = idControl;
             this.idLot = idLot;
@@ -23,6 +24,7 @@ namespace EntityLayer
             this.density = density;
             this.employee = employee;
             this.ph = ph;
+            this.observaciones = observaciones;
         }
         public bool Equals(ControlLote other)
         {

@@ -55,6 +55,14 @@ namespace DataLayer
                         drLote.Variedad, drLote.Activo);
             return lotes.ToList();
         }
+        public List<ControlLote> ControlesDeUnLote(Lote lote)
+        {
+            var controles = from drControl in dsRasmia.ControlLote
+                            where drControl.idLote == lote.idLote
+                            select new ControlLote(drControl.idControl, drControl.idLote, drControl.Temperatura,
+                            drControl.Densidad, drControl.Empleado, drControl.Ph, drControl.Observaciones);
+            return controles.ToList();
+        }
 
-}
+    }
 }

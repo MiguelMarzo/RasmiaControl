@@ -16,5 +16,9 @@ namespace LogicLayer
         {
             return _datos.LotesActivos();
         }
+        public List<ControlLote> ControlesDeUnLote(Lote lote)
+        {
+            return _datos.ControlesDeUnLote(lote);
+        }
     }
 }

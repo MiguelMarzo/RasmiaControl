@@ -58,6 +58,7 @@
             this.dgvLotesActivos.Name = "dgvLotesActivos";
             this.dgvLotesActivos.Size = new System.Drawing.Size(450, 327);
             this.dgvLotesActivos.TabIndex = 2;
+            this.dgvLotesActivos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellEnterLotes);
             // 
             // btnControl
             // 
@@ -68,6 +69,7 @@
             this.btnControl.TabIndex = 3;
             this.btnControl.Text = "Realizar Control";
             this.btnControl.UseVisualStyleBackColor = true;
+            this.btnControl.Click += new System.EventHandler(this.btnControl_Click);
             // 
             // btn2
             // 
