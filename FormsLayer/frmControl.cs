@@ -28,8 +28,13 @@ namespace FormsLayer
         {
             controles = _negocio.ControlesDeUnLote(lote);
             txtIDLote.Text = lote.idLote.ToString();
-            cmbControles.DataSource = controles;
-            cmbControles.DisplayMember = "idControl";
+            cmbControles.Items.Add("Nuevo Control");
+            foreach (ControlLote contr in controles)
+            {
+                cmbControles.Items.Add(contr);
+            }
+            cmbControles.DisplayMember = "idControl";            
+            cmbControles.SelectedIndex = 0;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
