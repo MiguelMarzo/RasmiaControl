@@ -52,7 +52,23 @@ namespace FormsLayer
         private void btnControl_Click(object sender, EventArgs e)
         {
             ControlLote cntrlLote = new ControlLote();
-             
+            Empleado emp = (Empleado)cmbEmpleado.SelectedItem;
+            cntrlLote.idEmpleado = emp.idEmpleado;
+            cntrlLote.idLote = lote.idLote;
+            cntrlLote.ph = txtPH.Text;
+            cntrlLote.temperatura = txtTemperatura.Text;
+            cntrlLote.observaciones = txtObservaciones.Text;
+            cntrlLote.densidad = txtDensidad.Text;
+            if (cmbControles.SelectedIndex != 0)
+            {
+                ControlLote cntrlSeleccionado = new ControlLote();
+                cntrlSeleccionado = (ControlLote)cmbControles.SelectedItem;
+                cntrlLote.idControl = cntrlSeleccionado.idControl;
+                MessageBox.Show(_negocio.EditarControl(cntrlLote));
+            } else
+            {
+                MessageBox.Show(_negocio.AñadirControl(cntrlLote));
+            }
         }
     }
 }

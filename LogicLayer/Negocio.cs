@@ -24,5 +24,13 @@ namespace LogicLayer
         {
             return _datos.TodosLosEmpleados();
         }
+        public String EditarControl(ControlLote control)
+        {
+            return _datos.EditarControl(control);
+        }
+        public String AñadirControl(ControlLote control)
+        {
+            return _datos.AñadirControl(control);
+        }
     }
 }

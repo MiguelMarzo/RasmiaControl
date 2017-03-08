@@ -74,5 +74,49 @@ namespace DataLayer
             return empleados.ToList();
         }
 
+
+        //UPDATES 
+        //TODO: implementar try catchs
+        public String EditarControl(ControlLote control)
+        {
+            var drControl = dsRasmia.ControlLote.FindByidControl(control.idControl);
+            drControl.IDEmpleado = control.idEmpleado;
+            drControl.Densidad = control.densidad;
+            drControl.Observaciones = control.observaciones;
+            drControl.Ph = control.ph;
+            drControl.Temperatura = control.temperatura;
+            daControl.Update(drControl);
+            dsRasmia.ControlLote.GetChanges();
+            drControl.AcceptChanges();
+            return "Lote actualizado";
+        }
+
+
+        //INSERTS
+        //TODO: implementar try catchs
+        public String AñadirControl(ControlLote control)
+        {
+            DSRasmia.ControlLoteRow drControl = dsRasmia.ControlLote.NewControlLoteRow();
+            drControl.idControl = MaxIdControl();
+            drControl.IDEmpleado = control.idEmpleado;
+            drControl.Temperatura = control.temperatura;
+            drControl.Ph = control.ph;
+            drControl.Densidad = control.densidad;
+            drControl.Observaciones = control.observaciones;
+            dsRasmia.ControlLote.AddControlLoteRow(drControl);
+            daControl.Update(drControl);
+            return "Control añadido";
+        }
+
+
+        //AUXILIARES private
+        //TODO: Cambiar MaxIdControl y Control en general para que tenga un id dependiente del idLote
+        //      O sino, cambiar el cmbControl para que muestre la fecha
+        //      En cualquier caso hay que añadir fecha a la tabla Control y a su entidad correspondiente
+        private int MaxIdControl()
+        {
+            var maxID = dsRasmia.ControlLote.OrderByDescending(x => x.idControl).First().idControl;
+            return maxID + 1;
+        }
     }
 }
