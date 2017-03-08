@@ -64,7 +64,7 @@ namespace DataLayer
             var controles = from drControl in dsRasmia.ControlLote
                             where drControl.idLote == lote.idLote
                             select new ControlLote(drControl.idControl, drControl.idLote, drControl.Temperatura,
-                            drControl.Densidad, drControl.IDEmpleado, drControl.Ph, drControl.Observaciones);
+                            drControl.Densidad, drControl.IDEmpleado, drControl.Ph, drControl.Observaciones, drControl.Fecha);
             return controles.ToList();
         }
         public List<Empleado> TodosLosEmpleados()
@@ -85,6 +85,7 @@ namespace DataLayer
             drControl.Observaciones = control.observaciones;
             drControl.Ph = control.ph;
             drControl.Temperatura = control.temperatura;
+            drControl.Fecha = control.fecha;
             daControl.Update(drControl);
             dsRasmia.ControlLote.GetChanges();
             drControl.AcceptChanges();
@@ -98,11 +99,13 @@ namespace DataLayer
         {
             DSRasmia.ControlLoteRow drControl = dsRasmia.ControlLote.NewControlLoteRow();
             drControl.idControl = MaxIdControl();
+            drControl.idLote = control.idLote;
             drControl.IDEmpleado = control.idEmpleado;
             drControl.Temperatura = control.temperatura;
             drControl.Ph = control.ph;
             drControl.Densidad = control.densidad;
             drControl.Observaciones = control.observaciones;
+            drControl.Fecha = control.fecha;
             dsRasmia.ControlLote.AddControlLoteRow(drControl);
             daControl.Update(drControl);
             return "Control añadido";

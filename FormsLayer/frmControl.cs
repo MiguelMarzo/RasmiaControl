@@ -59,6 +59,7 @@ namespace FormsLayer
             cntrlLote.temperatura = txtTemperatura.Text;
             cntrlLote.observaciones = txtObservaciones.Text;
             cntrlLote.densidad = txtDensidad.Text;
+            cntrlLote.fecha = calendarFecha.SelectionEnd;
             if (cmbControles.SelectedIndex != 0)
             {
                 ControlLote cntrlSeleccionado = new ControlLote();
@@ -69,6 +70,11 @@ namespace FormsLayer
             {
                 MessageBox.Show(_negocio.AñadirControl(cntrlLote));
             }
+        }
+
+        private void cmbControles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

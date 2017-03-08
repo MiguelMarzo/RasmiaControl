@@ -46,6 +46,8 @@
             this.lblObservaciones = new System.Windows.Forms.Label();
             this.lblEmpleado = new System.Windows.Forms.Label();
             this.cmbEmpleado = new System.Windows.Forms.ComboBox();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.calendarFecha = new System.Windows.Forms.MonthCalendar();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -75,7 +77,7 @@
             // btnControl
             // 
             this.btnControl.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnControl.Location = new System.Drawing.Point(465, 163);
+            this.btnControl.Location = new System.Drawing.Point(545, 279);
             this.btnControl.Name = "btnControl";
             this.btnControl.Size = new System.Drawing.Size(112, 82);
             this.btnControl.TabIndex = 7;
@@ -87,7 +89,7 @@
             // 
             this.lblIDLote.AutoSize = true;
             this.lblIDLote.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDLote.Location = new System.Drawing.Point(177, 81);
+            this.lblIDLote.Location = new System.Drawing.Point(89, 78);
             this.lblIDLote.Name = "lblIDLote";
             this.lblIDLote.Size = new System.Drawing.Size(66, 19);
             this.lblIDLote.TabIndex = 8;
@@ -97,7 +99,7 @@
             // 
             this.lblIDControl.AutoSize = true;
             this.lblIDControl.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDControl.Location = new System.Drawing.Point(165, 122);
+            this.lblIDControl.Location = new System.Drawing.Point(77, 119);
             this.lblIDControl.Name = "lblIDControl";
             this.lblIDControl.Size = new System.Drawing.Size(90, 19);
             this.lblIDControl.TabIndex = 9;
@@ -106,7 +108,7 @@
             // txtIDLote
             // 
             this.txtIDLote.Enabled = false;
-            this.txtIDLote.Location = new System.Drawing.Point(289, 80);
+            this.txtIDLote.Location = new System.Drawing.Point(201, 77);
             this.txtIDLote.Name = "txtIDLote";
             this.txtIDLote.Size = new System.Drawing.Size(121, 20);
             this.txtIDLote.TabIndex = 10;
@@ -114,14 +116,15 @@
             // cmbControles
             // 
             this.cmbControles.FormattingEnabled = true;
-            this.cmbControles.Location = new System.Drawing.Point(289, 121);
+            this.cmbControles.Location = new System.Drawing.Point(201, 118);
             this.cmbControles.Name = "cmbControles";
             this.cmbControles.Size = new System.Drawing.Size(121, 21);
             this.cmbControles.TabIndex = 11;
+            this.cmbControles.SelectedIndexChanged += new System.EventHandler(this.cmbControles_SelectedIndexChanged);
             // 
             // txtTemperatura
             // 
-            this.txtTemperatura.Location = new System.Drawing.Point(289, 163);
+            this.txtTemperatura.Location = new System.Drawing.Point(201, 160);
             this.txtTemperatura.Name = "txtTemperatura";
             this.txtTemperatura.Size = new System.Drawing.Size(121, 20);
             this.txtTemperatura.TabIndex = 13;
@@ -130,7 +133,7 @@
             // 
             this.lblTemperatura.AutoSize = true;
             this.lblTemperatura.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTemperatura.Location = new System.Drawing.Point(138, 164);
+            this.lblTemperatura.Location = new System.Drawing.Point(50, 161);
             this.lblTemperatura.Name = "lblTemperatura";
             this.lblTemperatura.Size = new System.Drawing.Size(145, 19);
             this.lblTemperatura.TabIndex = 12;
@@ -138,7 +141,7 @@
             // 
             // txtDensidad
             // 
-            this.txtDensidad.Location = new System.Drawing.Point(289, 204);
+            this.txtDensidad.Location = new System.Drawing.Point(201, 201);
             this.txtDensidad.Name = "txtDensidad";
             this.txtDensidad.Size = new System.Drawing.Size(121, 20);
             this.txtDensidad.TabIndex = 15;
@@ -147,7 +150,7 @@
             // 
             this.lblDensidad.AutoSize = true;
             this.lblDensidad.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDensidad.Location = new System.Drawing.Point(168, 205);
+            this.lblDensidad.Location = new System.Drawing.Point(80, 202);
             this.lblDensidad.Name = "lblDensidad";
             this.lblDensidad.Size = new System.Drawing.Size(84, 19);
             this.lblDensidad.TabIndex = 14;
@@ -155,7 +158,7 @@
             // 
             // txtPH
             // 
-            this.txtPH.Location = new System.Drawing.Point(289, 245);
+            this.txtPH.Location = new System.Drawing.Point(201, 242);
             this.txtPH.Name = "txtPH";
             this.txtPH.Size = new System.Drawing.Size(121, 20);
             this.txtPH.TabIndex = 17;
@@ -164,7 +167,7 @@
             // 
             this.lblPH.AutoSize = true;
             this.lblPH.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPH.Location = new System.Drawing.Point(193, 246);
+            this.lblPH.Location = new System.Drawing.Point(105, 243);
             this.lblPH.Name = "lblPH";
             this.lblPH.Size = new System.Drawing.Size(34, 19);
             this.lblPH.TabIndex = 16;
@@ -172,7 +175,7 @@
             // 
             // txtObservaciones
             // 
-            this.txtObservaciones.Location = new System.Drawing.Point(289, 283);
+            this.txtObservaciones.Location = new System.Drawing.Point(201, 280);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(316, 81);
@@ -182,7 +185,7 @@
             // 
             this.lblObservaciones.AutoSize = true;
             this.lblObservaciones.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObservaciones.Location = new System.Drawing.Point(148, 284);
+            this.lblObservaciones.Location = new System.Drawing.Point(60, 281);
             this.lblObservaciones.Name = "lblObservaciones";
             this.lblObservaciones.Size = new System.Drawing.Size(124, 19);
             this.lblObservaciones.TabIndex = 18;
@@ -206,6 +209,23 @@
             this.cmbEmpleado.Size = new System.Drawing.Size(121, 21);
             this.cmbEmpleado.TabIndex = 21;
             // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(345, 159);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(58, 19);
+            this.lblFecha.TabIndex = 22;
+            this.lblFecha.Text = "Fecha:";
+            // 
+            // calendarFecha
+            // 
+            this.calendarFecha.Location = new System.Drawing.Point(415, 88);
+            this.calendarFecha.MaxSelectionCount = 1;
+            this.calendarFecha.Name = "calendarFecha";
+            this.calendarFecha.TabIndex = 23;
+            // 
             // frmControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,6 +233,8 @@
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(711, 406);
             this.ControlBox = false;
+            this.Controls.Add(this.calendarFecha);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.cmbEmpleado);
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.txtObservaciones);
@@ -261,5 +283,7 @@
         private System.Windows.Forms.Label lblObservaciones;
         private System.Windows.Forms.Label lblEmpleado;
         private System.Windows.Forms.ComboBox cmbEmpleado;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.MonthCalendar calendarFecha;
     }
 }

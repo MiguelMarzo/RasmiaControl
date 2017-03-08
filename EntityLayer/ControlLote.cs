@@ -15,13 +15,14 @@ namespace EntityLayer
         public int idEmpleado { get; set; }
         public String ph { get; set; }
         public String observaciones { get; set; }
+        public DateTime fecha { get; set; }
 
 
         public ControlLote()
         {
 
         }
-        public ControlLote(int idControl, int idLote, String temperatura, String densidad, int empleado, String ph, String observaciones)
+        public ControlLote(int idControl, int idLote, String temperatura, String densidad, int empleado, String ph, String observaciones, DateTime fecha)
         {
             this.idControl = idControl;
             this.idLote = idLote;
@@ -30,6 +31,7 @@ namespace EntityLayer
             this.idEmpleado = empleado;
             this.ph = ph;
             this.observaciones = observaciones;
+            this.fecha = fecha;
         }
         public bool Equals(ControlLote other)
         {
