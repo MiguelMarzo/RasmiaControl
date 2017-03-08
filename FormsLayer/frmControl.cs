@@ -74,7 +74,23 @@ namespace FormsLayer
 
         private void cmbControles_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (cmbControles.SelectedIndex > 0)
+            {
+                ControlLote cntrlSeleccionado = new ControlLote();
+                cntrlSeleccionado = (ControlLote)cmbControles.SelectedItem;
+                txtDensidad.Text = cntrlSeleccionado.densidad;
+                txtObservaciones.Text = cntrlSeleccionado.observaciones;
+                txtPH.Text = cntrlSeleccionado.ph;
+                txtTemperatura.Text = cntrlSeleccionado.temperatura;
+                calendarFecha.SelectionEnd = cntrlSeleccionado.fecha;
+            } else
+            {
+                txtDensidad.Text = "";
+                txtObservaciones.Text = "";
+                txtPH.Text = "";
+                txtTemperatura.Text = "";
+                calendarFecha.SelectionEnd = DateTime.Today;
+            }          
         }
     }
 }
