@@ -44,6 +44,8 @@
             this.lblPH = new System.Windows.Forms.Label();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.lblObservaciones = new System.Windows.Forms.Label();
+            this.lblEmpleado = new System.Windows.Forms.Label();
+            this.cmbEmpleado = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -73,12 +75,13 @@
             // btnControl
             // 
             this.btnControl.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnControl.Location = new System.Drawing.Point(484, 163);
+            this.btnControl.Location = new System.Drawing.Point(465, 163);
             this.btnControl.Name = "btnControl";
             this.btnControl.Size = new System.Drawing.Size(112, 82);
             this.btnControl.TabIndex = 7;
             this.btnControl.Text = "Realizar Control";
             this.btnControl.UseVisualStyleBackColor = true;
+            this.btnControl.Click += new System.EventHandler(this.btnControl_Click);
             // 
             // lblIDLote
             // 
@@ -169,7 +172,7 @@
             // 
             // txtObservaciones
             // 
-            this.txtObservaciones.Location = new System.Drawing.Point(289, 294);
+            this.txtObservaciones.Location = new System.Drawing.Point(289, 283);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(316, 81);
@@ -179,11 +182,29 @@
             // 
             this.lblObservaciones.AutoSize = true;
             this.lblObservaciones.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObservaciones.Location = new System.Drawing.Point(148, 295);
+            this.lblObservaciones.Location = new System.Drawing.Point(148, 284);
             this.lblObservaciones.Name = "lblObservaciones";
             this.lblObservaciones.Size = new System.Drawing.Size(124, 19);
             this.lblObservaciones.TabIndex = 18;
             this.lblObservaciones.Text = "Observaciones:";
+            // 
+            // lblEmpleado
+            // 
+            this.lblEmpleado.AutoSize = true;
+            this.lblEmpleado.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleado.Location = new System.Drawing.Point(461, 21);
+            this.lblEmpleado.Name = "lblEmpleado";
+            this.lblEmpleado.Size = new System.Drawing.Size(89, 19);
+            this.lblEmpleado.TabIndex = 20;
+            this.lblEmpleado.Text = "Empleado:";
+            // 
+            // cmbEmpleado
+            // 
+            this.cmbEmpleado.FormattingEnabled = true;
+            this.cmbEmpleado.Location = new System.Drawing.Point(556, 21);
+            this.cmbEmpleado.Name = "cmbEmpleado";
+            this.cmbEmpleado.Size = new System.Drawing.Size(121, 21);
+            this.cmbEmpleado.TabIndex = 21;
             // 
             // frmControl
             // 
@@ -192,6 +213,8 @@
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(711, 406);
             this.ControlBox = false;
+            this.Controls.Add(this.cmbEmpleado);
+            this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.lblObservaciones);
             this.Controls.Add(this.txtPH);
@@ -236,5 +259,7 @@
         private System.Windows.Forms.Label lblPH;
         private System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.Label lblObservaciones;
+        private System.Windows.Forms.Label lblEmpleado;
+        private System.Windows.Forms.ComboBox cmbEmpleado;
     }
 }

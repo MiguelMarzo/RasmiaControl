@@ -20,5 +20,9 @@ namespace LogicLayer
         {
             return _datos.ControlesDeUnLote(lote);
         }
+        public List<Empleado> TodosLosEmpleados()
+        {
+            return _datos.TodosLosEmpleados();
+        }
     }
 }

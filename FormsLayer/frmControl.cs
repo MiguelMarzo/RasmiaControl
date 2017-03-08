@@ -16,16 +16,21 @@ namespace FormsLayer
     {
         private Negocio _negocio = new Negocio();
         private List<ControlLote> controles = new List<ControlLote>();
+        private List<Empleado> empleados = new List<Empleado>();
         private Lote lote;
 
         public frmControl(Lote loteElegido)
         {
             InitializeComponent();
             lote = loteElegido;
+
         }
 
         private void frmControl_Load(object sender, EventArgs e)
         {
+            empleados = _negocio.TodosLosEmpleados();
+            cmbEmpleado.DataSource = empleados;
+            cmbEmpleado.DisplayMember = "nombre";
             controles = _negocio.ControlesDeUnLote(lote);
             txtIDLote.Text = lote.idLote.ToString();
             cmbControles.Items.Add("Nuevo Control");
@@ -42,6 +47,12 @@ namespace FormsLayer
             frmLotesActivos lotesActivos = new frmLotesActivos();
             lotesActivos.Show();
             this.Close();
+        }
+
+        private void btnControl_Click(object sender, EventArgs e)
+        {
+            ControlLote cntrlLote = new ControlLote();
+             
         }
     }
 }

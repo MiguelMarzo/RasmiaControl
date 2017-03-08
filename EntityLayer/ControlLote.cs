@@ -9,20 +9,25 @@ namespace EntityLayer
     public class ControlLote : IEquatable<ControlLote>
     {
         public int idControl { get; set; }
-        public int idLot { get; set; }
-        public String temperature { get; set; }
-        public String density { get; set; }
-        public String employee { get; set; }
+        public int idLote { get; set; }
+        public String temperatura { get; set; }
+        public String densidad { get; set; }
+        public int idEmpleado { get; set; }
         public String ph { get; set; }
         public String observaciones { get; set; }
 
-        public ControlLote(int idControl, int idLot, String temperature, String density, String employee, String ph, String observaciones)
+
+        public ControlLote()
+        {
+
+        }
+        public ControlLote(int idControl, int idLote, String temperatura, String densidad, int empleado, String ph, String observaciones)
         {
             this.idControl = idControl;
-            this.idLot = idLot;
-            this.temperature = temperature;
-            this.density = density;
-            this.employee = employee;
+            this.idLote = idLote;
+            this.temperatura = temperatura;
+            this.densidad = densidad;
+            this.idEmpleado = empleado;
             this.ph = ph;
             this.observaciones = observaciones;
         }
