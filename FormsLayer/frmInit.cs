@@ -33,5 +33,12 @@ namespace FormsLayer
         {
             Application.Exit();
         }
+
+        private void btnEstadisticas_Click(object sender, EventArgs e)
+        {
+            frmEstadisticas estats = new frmEstadisticas();
+            estats.Show();
+            this.Close();
+        }
     }
 }

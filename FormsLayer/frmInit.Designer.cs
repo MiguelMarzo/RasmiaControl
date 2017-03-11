@@ -44,18 +44,20 @@
             this.lblTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTitulo.Font = new System.Drawing.Font("Castellar", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(12, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(16, 11);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(686, 79);
+            this.lblTitulo.Size = new System.Drawing.Size(858, 98);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Rasmia Control";
             // 
             // btnControl
             // 
             this.btnControl.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnControl.Location = new System.Drawing.Point(39, 117);
+            this.btnControl.Location = new System.Drawing.Point(52, 144);
+            this.btnControl.Margin = new System.Windows.Forms.Padding(4);
             this.btnControl.Name = "btnControl";
-            this.btnControl.Size = new System.Drawing.Size(169, 109);
+            this.btnControl.Size = new System.Drawing.Size(225, 134);
             this.btnControl.TabIndex = 1;
             this.btnControl.Text = "Ver Lotes Activos";
             this.btnControl.UseVisualStyleBackColor = true;
@@ -64,9 +66,10 @@
             // btnBuscarLote
             // 
             this.btnBuscarLote.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarLote.Location = new System.Drawing.Point(263, 117);
+            this.btnBuscarLote.Location = new System.Drawing.Point(351, 144);
+            this.btnBuscarLote.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarLote.Name = "btnBuscarLote";
-            this.btnBuscarLote.Size = new System.Drawing.Size(169, 109);
+            this.btnBuscarLote.Size = new System.Drawing.Size(225, 134);
             this.btnBuscarLote.TabIndex = 2;
             this.btnBuscarLote.Text = "Buscar Lote";
             this.btnBuscarLote.UseVisualStyleBackColor = true;
@@ -74,20 +77,23 @@
             // btnEstadisticas
             // 
             this.btnEstadisticas.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstadisticas.Location = new System.Drawing.Point(490, 117);
+            this.btnEstadisticas.Location = new System.Drawing.Point(653, 144);
+            this.btnEstadisticas.Margin = new System.Windows.Forms.Padding(4);
             this.btnEstadisticas.Name = "btnEstadisticas";
-            this.btnEstadisticas.Size = new System.Drawing.Size(169, 109);
+            this.btnEstadisticas.Size = new System.Drawing.Size(225, 134);
             this.btnEstadisticas.TabIndex = 3;
             this.btnEstadisticas.Text = "Estadisticas";
             this.btnEstadisticas.UseVisualStyleBackColor = true;
+            this.btnEstadisticas.Click += new System.EventHandler(this.btnEstadisticas_Click);
             // 
             // btnAjustes
             // 
             this.btnAjustes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAjustes.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAjustes.Location = new System.Drawing.Point(263, 285);
+            this.btnAjustes.Location = new System.Drawing.Point(351, 351);
+            this.btnAjustes.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(169, 109);
+            this.btnAjustes.Size = new System.Drawing.Size(225, 134);
             this.btnAjustes.TabIndex = 4;
             this.btnAjustes.Text = "Ajustes";
             this.btnAjustes.UseVisualStyleBackColor = true;
@@ -96,9 +102,10 @@
             // 
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSalir.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(39, 285);
+            this.btnSalir.Location = new System.Drawing.Point(52, 351);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(169, 109);
+            this.btnSalir.Size = new System.Drawing.Size(225, 134);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -106,10 +113,10 @@
             // 
             // frmInit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(711, 406);
+            this.ClientSize = new System.Drawing.Size(948, 500);
             this.ControlBox = false;
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAjustes);
@@ -119,6 +126,7 @@
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmInit";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
