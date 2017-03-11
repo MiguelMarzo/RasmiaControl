@@ -52,6 +52,7 @@ namespace FormsLayer
             Lote lote = lotes.Find(a => a.idLote.ToString() == dgvLotesActivos.SelectedRows[0].Cells[0].Value.ToString());
             frmControl frmControl = new frmControl(lote);
             frmControl.Show();
+            this.Close();
         }
     }
 }

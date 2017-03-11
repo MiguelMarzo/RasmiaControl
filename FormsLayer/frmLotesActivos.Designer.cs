@@ -44,28 +44,31 @@
             this.lblTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTitulo.Font = new System.Drawing.Font("Castellar", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblTitulo.Location = new System.Drawing.Point(184, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(245, 11);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(263, 37);
+            this.lblTitulo.Size = new System.Drawing.Size(336, 46);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Lotes Activos";
             // 
             // dgvLotesActivos
             // 
-            this.dgvLotesActivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvLotesActivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLotesActivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLotesActivos.Location = new System.Drawing.Point(12, 67);
+            this.dgvLotesActivos.Location = new System.Drawing.Point(16, 82);
+            this.dgvLotesActivos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvLotesActivos.Name = "dgvLotesActivos";
-            this.dgvLotesActivos.Size = new System.Drawing.Size(450, 327);
+            this.dgvLotesActivos.Size = new System.Drawing.Size(565, 377);
             this.dgvLotesActivos.TabIndex = 2;
             this.dgvLotesActivos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellEnterLotes);
             // 
             // btnControl
             // 
             this.btnControl.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnControl.Location = new System.Drawing.Point(516, 78);
+            this.btnControl.Location = new System.Drawing.Point(631, 94);
+            this.btnControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnControl.Name = "btnControl";
-            this.btnControl.Size = new System.Drawing.Size(169, 109);
+            this.btnControl.Size = new System.Drawing.Size(225, 134);
             this.btnControl.TabIndex = 3;
             this.btnControl.Text = "Realizar Control";
             this.btnControl.UseVisualStyleBackColor = true;
@@ -74,9 +77,10 @@
             // btn2
             // 
             this.btn2.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2.Location = new System.Drawing.Point(516, 260);
+            this.btn2.Location = new System.Drawing.Point(631, 325);
+            this.btn2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(169, 109);
+            this.btn2.Size = new System.Drawing.Size(225, 134);
             this.btn2.TabIndex = 4;
             this.btn2.Text = "Mas";
             this.btn2.UseVisualStyleBackColor = true;
@@ -84,9 +88,10 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(28, 12);
+            this.btnVolver.Location = new System.Drawing.Point(37, 15);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(111, 37);
+            this.btnVolver.Size = new System.Drawing.Size(148, 46);
             this.btnVolver.TabIndex = 5;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -94,10 +99,10 @@
             // 
             // frmLotesActivos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(711, 406);
+            this.ClientSize = new System.Drawing.Size(948, 500);
             this.ControlBox = false;
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btn2);
@@ -107,10 +112,11 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmLotesActivos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lotes Activos";
+            this.Text = "Rasmia - Lotes Activos";
             this.Load += new System.EventHandler(this.frmLotesActivos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLotesActivos)).EndInit();
             this.ResumeLayout(false);
