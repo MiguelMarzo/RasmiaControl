@@ -11,7 +11,7 @@ ActiveLots: Displays info from active lots
 <br/>
 <img src="http://i.imgur.com/25QyfCv.png" />
 <br/>
-Control Form: Displays all controls past controls from an specific Lot and allows the user to create new Controls or
+Control Form: Displays all controls of an specific Lot and allows the user to create new Controls or
 edit the data from the already existing ones
 <img src="http://i.imgur.com/vDcODQ3.png"/> 
 
