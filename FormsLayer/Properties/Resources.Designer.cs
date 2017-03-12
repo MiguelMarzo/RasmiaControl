@@ -63,9 +63,9 @@ namespace FormsLayer.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RasmiaLogo {
+        internal static System.Drawing.Bitmap icon {
             get {
-                object obj = ResourceManager.GetObject("RasmiaLogo", resourceCulture);
+                object obj = ResourceManager.GetObject("icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
