@@ -32,9 +32,10 @@ namespace LogicLayer
         {
             return _datos.AñadirControl(control);
         }
-        //public List<Lote> TodosLosLotes()
-        //{
-        //    return _datos.TodosLosLotes();
-        //}
+
+        public List<Lote> TodosLosLotes()
+        {
+            return _datos.TodosLosLotes();
+        }
     }
 }

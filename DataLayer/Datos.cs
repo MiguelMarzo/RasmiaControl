@@ -73,6 +73,12 @@ namespace DataLayer
                             select new Empleado(drEmpleado.IdEmpleado, drEmpleado.Nombre);
             return empleados.ToList();
         }
+        public List<Lote> TodosLosLotes()
+        {
+            var lotes = from drLote in dsRasmia.Lote
+                        select new Lote(drLote.Id, drLote.Miel, drLote.Litros, drLote.FechaInicio, drLote.FechaFinal, drLote.Variedad, drLote.Activo);
+            return lotes.ToList();
+        }
 
 
         //UPDATES 

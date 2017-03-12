@@ -90,7 +90,7 @@
             // 
             this.btnAjustes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAjustes.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAjustes.Location = new System.Drawing.Point(351, 351);
+            this.btnAjustes.Location = new System.Drawing.Point(351, 311);
             this.btnAjustes.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjustes.Name = "btnAjustes";
             this.btnAjustes.Size = new System.Drawing.Size(225, 134);
@@ -102,7 +102,7 @@
             // 
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSalir.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(52, 351);
+            this.btnSalir.Location = new System.Drawing.Point(52, 311);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(225, 134);

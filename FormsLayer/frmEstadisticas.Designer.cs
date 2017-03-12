@@ -58,6 +58,7 @@
             this.dgvLotes.Name = "dgvLotes";
             this.dgvLotes.Size = new System.Drawing.Size(565, 377);
             this.dgvLotes.TabIndex = 4;
+            this.dgvLotes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellEnterLotes);
             // 
             // btnVolver
             // 
@@ -81,6 +82,7 @@
             this.btnControl.TabIndex = 7;
             this.btnControl.Text = "Ver Estadisticas";
             this.btnControl.UseVisualStyleBackColor = true;
+            this.btnControl.Click += new System.EventHandler(this.btnControl_Click);
             // 
             // frmEstadisticas
             // 
