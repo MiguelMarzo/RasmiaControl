@@ -19,7 +19,7 @@ namespace FormsLayer
 
         private void frmInit_Load(object sender, EventArgs e)
         {
-
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void btnControl_Click(object sender, EventArgs e)

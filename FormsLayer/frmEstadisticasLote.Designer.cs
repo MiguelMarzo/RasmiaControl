@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnTemperatura = new System.Windows.Forms.Button();
             this.btnPH = new System.Windows.Forms.Button();
@@ -44,16 +44,16 @@
             this.chart1.BorderlineColor = System.Drawing.Color.Black;
             this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chart1.BorderSkin.BackColor = System.Drawing.Color.White;
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(12, 96);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(633, 373);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -68,6 +68,7 @@
             this.btnTemperatura.TabIndex = 4;
             this.btnTemperatura.Text = "Temperatura";
             this.btnTemperatura.UseVisualStyleBackColor = true;
+            this.btnTemperatura.Click += new System.EventHandler(this.btnTemperatura_Click);
             // 
             // btnPH
             // 
@@ -79,6 +80,7 @@
             this.btnPH.TabIndex = 5;
             this.btnPH.Text = "PH";
             this.btnPH.UseVisualStyleBackColor = true;
+            this.btnPH.Click += new System.EventHandler(this.btnPH_Click);
             // 
             // btnDensidad
             // 
@@ -90,6 +92,7 @@
             this.btnDensidad.TabIndex = 6;
             this.btnDensidad.Text = "Densidad";
             this.btnDensidad.UseVisualStyleBackColor = true;
+            this.btnDensidad.Click += new System.EventHandler(this.btnDensidad_Click);
             // 
             // btnVolver
             // 
@@ -107,6 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(948, 500);
             this.ControlBox = false;
             this.Controls.Add(this.btnVolver);

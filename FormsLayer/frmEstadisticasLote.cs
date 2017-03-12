@@ -39,5 +39,38 @@ namespace FormsLayer
             estats.Show();
             this.Close();
         }
+
+        private void btnTemperatura_Click(object sender, EventArgs e)
+        {
+            chart1.Series[0].Points.Clear();
+            foreach (ControlLote control in controles)
+            {
+                chart1.Series[0].Points.AddXY(control.idControl, control.temperatura);
+            }
+            chart1.Series[0].Name = "Temperatura";
+            chart1.Refresh();
+        }
+
+        private void btnPH_Click(object sender, EventArgs e)
+        {
+            chart1.Series[0].Points.Clear();
+            foreach (ControlLote control in controles)
+            {
+                chart1.Series[0].Points.AddXY(control.idControl, control.ph);
+            }
+            chart1.Series[0].Name = "PH";
+            chart1.Refresh();
+        }
+
+        private void btnDensidad_Click(object sender, EventArgs e)
+        {
+            chart1.Series[0].Points.Clear();
+            foreach (ControlLote control in controles)
+            {
+                chart1.Series[0].Points.AddXY(control.idControl, control.densidad);
+            }
+            chart1.Series[0].Name = "Densidad";
+            chart1.Refresh();
+        }
     }
 }
