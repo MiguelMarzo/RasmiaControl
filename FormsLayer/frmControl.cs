@@ -42,13 +42,6 @@ namespace FormsLayer
             cmbControles.SelectedIndex = 0;
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            frmLotesActivos lotesActivos = new frmLotesActivos();
-            lotesActivos.Show();
-            this.Close();
-        }
-
         private void btnControl_Click(object sender, EventArgs e)
         {
             ControlLote cntrlLote = new ControlLote();
@@ -91,6 +84,13 @@ namespace FormsLayer
                 txtTemperatura.Text = "";
                 calendarFecha.SelectionEnd = DateTime.Today;
             }          
+        }
+
+        private void btnVolver_Click_1(object sender, EventArgs e)
+        {
+            frmLotesActivos lotesActivos = new frmLotesActivos();
+            lotesActivos.Show();
+            this.Close();
         }
     }
 }
