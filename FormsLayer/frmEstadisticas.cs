@@ -37,17 +37,18 @@ namespace FormsLayer
         {
             dgvLotes.Rows[dgvLotes.SelectedCells[0].RowIndex].Selected = true;
         }
-        private void btnVolver_Click(object sender, EventArgs e)
+
+        private void btnVolver_Click_1(object sender, EventArgs e)
         {
             frmInit inicio = new frmInit();
             inicio.Show();
             this.Close();
         }
 
-        private void btnControl_Click(object sender, EventArgs e)
+        private void btnVerEstadisticas_Click(object sender, EventArgs e)
         {
             Lote loteSeleccionado = lotes.Find(a => a.idLote.ToString() == dgvLotes.SelectedRows[0].Cells[0].Value.ToString());
-            frmEstadisticasLote estats = new frmEstadisticasLote(loteSeleccionado);            
+            frmEstadisticasLote estats = new frmEstadisticasLote(loteSeleccionado);
             estats.Show();
             this.Close();
         }

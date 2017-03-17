@@ -85,17 +85,24 @@ namespace DataLayer
         //TODO: implementar try catchs
         public String EditarControl(ControlLote control)
         {
-            var drControl = dsRasmia.ControlLote.FindByidControl(control.idControl);
-            drControl.IDEmpleado = control.idEmpleado;
-            drControl.Densidad = control.densidad;
-            drControl.Observaciones = control.observaciones;
-            drControl.Ph = control.ph;
-            drControl.Temperatura = control.temperatura;
-            drControl.Fecha = control.fecha;
-            daControl.Update(drControl);
-            dsRasmia.ControlLote.GetChanges();
-            drControl.AcceptChanges();
-            return "Lote actualizado";
+            try
+            {
+                var drControl = dsRasmia.ControlLote.FindByidControl(control.idControl);
+                drControl.IDEmpleado = control.idEmpleado;
+                drControl.Densidad = control.densidad;
+                drControl.Observaciones = control.observaciones;
+                drControl.Ph = control.ph;
+                drControl.Temperatura = control.temperatura;
+                drControl.Fecha = control.fecha;
+                daControl.Update(drControl);
+                dsRasmia.ControlLote.GetChanges();
+                drControl.AcceptChanges();
+                return "Lote actualizado";
+            } catch
+            {
+                return "Error actualizando el control";
+            }
+
         }
 
 
@@ -103,25 +110,30 @@ namespace DataLayer
         //TODO: implementar try catchs
         public String AñadirControl(ControlLote control)
         {
-            DSRasmia.ControlLoteRow drControl = dsRasmia.ControlLote.NewControlLoteRow();
-            drControl.idControl = MaxIdControl();
-            drControl.idLote = control.idLote;
-            drControl.IDEmpleado = control.idEmpleado;
-            drControl.Temperatura = control.temperatura;
-            drControl.Ph = control.ph;
-            drControl.Densidad = control.densidad;
-            drControl.Observaciones = control.observaciones;
-            drControl.Fecha = control.fecha;
-            dsRasmia.ControlLote.AddControlLoteRow(drControl);
-            daControl.Update(drControl);
-            return "Control añadido";
+            try
+            {
+                DSRasmia.ControlLoteRow drControl = dsRasmia.ControlLote.NewControlLoteRow();
+                drControl.idControl = MaxIdControl();
+                drControl.idLote = control.idLote;
+                drControl.IDEmpleado = control.idEmpleado;
+                drControl.Temperatura = control.temperatura;
+                drControl.Ph = control.ph;
+                drControl.Densidad = control.densidad;
+                drControl.Observaciones = control.observaciones;
+                drControl.Fecha = control.fecha;
+                dsRasmia.ControlLote.AddControlLoteRow(drControl);
+                daControl.Update(drControl);
+                return "Control añadido";
+            } catch
+            {
+                return "Error Insertando el Control";
+            }
+           
         }
 
 
         //AUXILIARES private
-        //TODO: Cambiar MaxIdControl y Control en general para que tenga un id dependiente del idLote
-        //      O sino, cambiar el cmbControl para que muestre la fecha
-        //      En cualquier caso hay que añadir fecha a la tabla Control y a su entidad correspondiente
+        //TODO: 
         private int MaxIdControl()
         {
             var maxID = dsRasmia.ControlLote.OrderByDescending(x => x.idControl).First().idControl;

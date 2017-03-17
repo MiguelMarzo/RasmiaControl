@@ -23,7 +23,6 @@ namespace FormsLayer
         {
             InitializeComponent();
             lote = loteElegido;
-
         }
 
         private void frmControl_Load(object sender, EventArgs e)
