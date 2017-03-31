@@ -100,6 +100,8 @@
             this.Controls.Add(this.dgvLotes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(966, 547);
+            this.MinimumSize = new System.Drawing.Size(966, 547);
             this.Name = "frmEstadisticas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rasmia - Estadisticas";
